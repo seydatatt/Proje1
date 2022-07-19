@@ -8,6 +8,7 @@ Original file is located at
 """
 #Öğrenci Not Sistemi
 from asyncio import wait_for
+import pandas as pd
 #Notlar durumu hesaplanır ve csv, excel dosyasına dönüştürülür.
 def not_hesapla(satir):
    satir = satir[:-1]
@@ -43,7 +44,7 @@ def notlar_gir():
   numara= input('Öğrencinin numara:')
   not1= input('Öğrencinin not:')
 
-  with open("sinav_notları.txt","a", encoding="UTF8) as file: 
+  with open("sinav_notları.txt","a", encoding="UTF8") as file: 
    file.write(ad+' '+ soyad+' '+ numara+':'+not1+'\n')
             
 #Notların kayıt edildiği fonksiyon.            
